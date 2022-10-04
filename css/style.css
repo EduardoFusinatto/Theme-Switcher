@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: auto;
+}
+
+.label {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #000000;
+  height: 150px;
+  width: 380px;
+  border-radius: 60px;
+  position: relative;
+}
+
+.checkbox {
+  display: none;
+}
+
+.bola {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  content: "";
+  width: 140px;
+  height: 140px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  position: absolute;
+  align-items: center;
+}
+
+.sol {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+.lua {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 50%;
+  cursor: pointer;
+}
+
+.lua img {
+  width: 120px;
+  height: 120px;
+}
+
+.sol img {
+  width: 120px;
+  height: 120px;
+}
+
+.sol.ativo ~ .bola {
+  left: 15px;
+}
+
+.lua.ativo ~ .bola {
+  right: 15px;
+}
+
+body[data-modo="light"] {
+  background-color: #f1f1f1;
+}
+
+body[data-modo="dark"] {
+  background-color: #292c35;
+}
+
+@media (max-width: 400px) {
+  .bola {
+    width: 90px;
+    height: 90px;
+  }
+  .label {
+    width: 250px;
+    height: 100px;
+  }
+  .lua img {
+    width: 80px;
+    height: 80px;
+  }
+  .sol img {
+    width: 80px;
+    height: 80px;
+  }
+}
